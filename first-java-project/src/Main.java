@@ -1,25 +1,16 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+
 public class Main {
+
     public static void main(String[] args) {
+        Warrior warrior1 = new Warrior("Arthur", 100, 75);
+        Mage mage1 = new Mage("Merlin", 80, 120);
 
-       int [] nombres = {3,4,5,6,76};
+        Game game = new Game();
 
-       int cible = 10;
+        game.addCharacter(warrior1);
+        game.addCharacter(mage1);
 
-       int indice = -1;
-
-       for (int i = 0; i < nombres.length; i++) {
-           if (nombres[i] == cible) {
-               indice = i;
-               break;
-           }
-       }
-
-       if(indice == -1){
-           System.out.println("Le nombre n'existe pas");
-       } else {
-           System.out.println("on a trouve le nombre a l'indice" + indice);
-       }
+        game.startBattle();
     }
 }
